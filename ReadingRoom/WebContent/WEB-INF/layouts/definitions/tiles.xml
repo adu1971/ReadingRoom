@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+"http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+
+	<definition name="baseLayout" template="/WEB-INF/layouts/template/baseLayout.jsp">
+		<put-attribute name="title" value="Context Based Library" />
+		<put-attribute name="heading" value="" />
+		<put-attribute name="tagline" value="" />
+		<put-attribute name="navigation" value="/WEB-INF/layouts/template/navigation.jsp" />
+		<put-attribute name="content" value="" />
+		<put-attribute name="footer" value="/WEB-INF/layouts/template/footer.jsp" />
+	</definition>
+	
+	<definition name="home" extends="baseLayout">
+		<put-attribute name="heading" value="Welcome to Concept Based Library" />
+		<put-attribute name="content" value="/WEB-INF/views/home.jsp" />
+	</definition>
+	
+	<definition name="concepts" extends="baseLayout">
+		<put-attribute name="heading" value="Concepts" />
+		<put-attribute name="tagline" value="The list of concepts in your area of interest" />
+		<put-attribute name="content" value="/WEB-INF/views/concepts.jsp" />
+	</definition>
+	
+	<definition name="documents" extends="baseLayout">
+		<put-attribute name="heading" value="Documents" />
+		<put-attribute name="tagline" value="The list of documents in your area of interest" />
+		<put-attribute name="content" value="/WEB-INF/views/documents.jsp" />
+	</definition>	
+	
+</tiles-definitions>
