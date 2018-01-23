@@ -1,11 +1,10 @@
-package org.adu.cbl.config;
+package org.adu.readingroom.config;
 
+import org.adu.readingroom.config.RootApplicationContextConfig;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 import javax.servlet.MultipartConfigElement;
 import javax.servlet.ServletRegistration.Dynamic;
-
-import org.adu.cbl.config.RootApplicationContextConfig;
 
 public class DispatcherServletInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
 

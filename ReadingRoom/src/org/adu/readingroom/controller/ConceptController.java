@@ -1,11 +1,11 @@
-package org.adu.cbl.controller;
+package org.adu.readingroom.controller;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
-import org.adu.cbl.model.Concept;
-import org.adu.cbl.service.ConceptService;
+import org.adu.readingroom.model.Concept;
+import org.adu.readingroom.service.ConceptService;
 import org.springframework.beans.factory.annotation.Autowired;
 //import org.slf4j.Logger;
 //import org.slf4j.LoggerFactory;
@@ -27,10 +27,10 @@ public class ConceptController {
 
 	@RequestMapping(value="/concepts", method=RequestMethod.GET)
 	public String getConcepts(Locale locale, Model model) {
-//		logger.info("Welcome to concepts page! The client locale is {}.", locale);
+		//logger.info("Welcome to concepts page! The client locale is {}.", locale);
 	
 		List<Concept> concepts = new ArrayList<Concept>();		
-		concepts = conceptService.getConcepts();		
+		concepts = conceptService.getConceptList();		
 		model.addAttribute("concepts", concepts );
 		return "concepts";
 	}
@@ -51,7 +51,7 @@ public class ConceptController {
 	@RequestMapping(value="/concepts/edit", method=RequestMethod.POST)
 	public String processConceptEditor(@ModelAttribute("conceptToEdit") Concept concept) {
 		
-		//if concept is a new created one:
+		//if this is a new concept to be created:
 		if (concept.getId()==0) {
 			conceptService.save(concept);
 		} else {
@@ -64,6 +64,9 @@ public class ConceptController {
 
 	@RequestMapping(value="/concepts/delete", method=RequestMethod.GET)
 	public String deleteConcept(@RequestParam("conceptId") String conceptId) {
+		
+		//(MISUSE OF GET METHOD. IT SHOULD NOT CAUSE DATA MODIFICATION.) 
+		
 		conceptService.deleteById(conceptId);
 		return "redirect:/concepts";	
 	}

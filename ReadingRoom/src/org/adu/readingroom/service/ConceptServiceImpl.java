@@ -1,9 +1,9 @@
-package org.adu.cbl.service;
+package org.adu.readingroom.service;
 
 import java.util.List;
 
-import org.adu.cbl.model.Concept;
-import org.adu.cbl.repository.ConceptRepository;
+import org.adu.readingroom.model.Concept;
+import org.adu.readingroom.repository.ConceptRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -16,8 +16,8 @@ public class ConceptServiceImpl implements ConceptService {
 	ConceptRepository conceptRepository;
 	
 	@Override
-	public List<Concept> getConcepts() {
-		return conceptRepository.getConcepts();
+	public List<Concept> getConceptList() {
+		return conceptRepository.getConceptList();
 	}
 	
 	@Override

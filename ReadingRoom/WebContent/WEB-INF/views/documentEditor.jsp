@@ -4,10 +4,10 @@
 
 
 <section class="container">
-	<form:form method="POST" modelAttribute="newDocument" class="form-horizontal" enctype="multipart/form-data">
+	<form:form method="POST" modelAttribute="documentToEdit" class="form-horizontal" enctype="multipart/form-data">
 		<form:errors path="*" cssClass="alert alert-danger" element="div" />
 		<fieldset>
-			<legend>New Document </legend>
+			<legend>Document Information </legend>
 
 			<div class="form-group">
 				<label class="control-label col-lg-2" for="id"> <spring:message code="document.id.label" /> </label>
@@ -36,7 +36,7 @@
 				<div class="col-lg-offset-2 col-lg-10">
 					<input type="submit" id="btnSave" class="btn btn-primary" value="Save" />
 				</div>
-			</div>
+			</div>	
 
 		</fieldset>
 	</form:form>

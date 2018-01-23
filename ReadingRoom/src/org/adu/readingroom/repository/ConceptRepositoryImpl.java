@@ -1,10 +1,11 @@
-package org.adu.cbl.repository;
+package org.adu.readingroom.repository;
 
 import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import org.adu.cbl.model.Concept;
+
+import org.adu.readingroom.model.Concept;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -16,7 +17,7 @@ public class ConceptRepositoryImpl implements ConceptRepository {
 	EntityManager entityManager;
 		
 	@Override
-	public List<Concept> getConcepts() {
+	public List<Concept> getConceptList() {
 		return entityManager.createQuery("from Concept", Concept.class).getResultList();
 	}
 
@@ -26,8 +27,8 @@ public class ConceptRepositoryImpl implements ConceptRepository {
 	}
 
 	@Override
-	public void save(Concept concept) {
-		entityManager.persist(concept);
+	public void save(Concept newConcept) {
+		entityManager.persist(newConcept);
 	}
 
 	@Override

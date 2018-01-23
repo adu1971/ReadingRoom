@@ -1,4 +1,4 @@
-package org.adu.cbl.config;
+package org.adu.readingroom.config;
 
 import java.util.Properties;
 
@@ -30,7 +30,7 @@ public class PersistenceConfig {
 	 public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
 		 LocalContainerEntityManagerFactoryBean entityManagerFactory = new LocalContainerEntityManagerFactoryBean();
 		 entityManagerFactory.setDataSource(getDataSource());
-		 entityManagerFactory.setPackagesToScan(new String[] {"org.adu.cbl.model"});		 
+		 entityManagerFactory.setPackagesToScan(new String[] {"org.adu.readingroom.model"});		 
 		 entityManagerFactory.setJpaVendorAdapter(new HibernateJpaVendorAdapter());
 		 entityManagerFactory.setJpaProperties(getHibernateProperties());
 		 return entityManagerFactory;
@@ -41,7 +41,7 @@ public class PersistenceConfig {
 //	 public LocalSessionFactoryBean sessionFactory() {
 //		 LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();
 //		 sessionFactory.setDataSource(getDataSource());
-//		 sessionFactory.setPackagesToScan( new String[] { "org.adu.cbl.model" });
+//		 sessionFactory.setPackagesToScan( new String[] { "org.adu.readingroom.model" });
 //		 sessionFactory.setHibernateProperties(getHibernateProperties());
 //		 return sessionFactory;
 //	 }

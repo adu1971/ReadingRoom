@@ -1,12 +1,12 @@
-package org.adu.cbl.repository;
+package org.adu.readingroom.repository;
 
 import java.util.List;
 
-import org.adu.cbl.model.Concept;
+import org.adu.readingroom.model.Concept;
 
 public interface ConceptRepository {
 
-	List<Concept> getConcepts();
+	List<Concept> getConceptList();
 	Concept getById(String conceptId);
 	void save(Concept concept);
 	void update(Concept concept);

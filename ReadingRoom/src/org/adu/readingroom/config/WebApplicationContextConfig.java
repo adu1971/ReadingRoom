@@ -1,4 +1,4 @@
-package org.adu.cbl.config;
+package org.adu.readingroom.config;
 
 import java.util.Locale;
 
@@ -22,7 +22,7 @@ import org.springframework.web.servlet.view.JstlView;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan("org.adu.cbl")
+@ComponentScan("org.adu.readingroom")
 public class WebApplicationContextConfig implements WebMvcConfigurer {
 	
 //	@Override

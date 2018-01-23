@@ -1,11 +1,11 @@
-package org.adu.cbl.repository;
+package org.adu.readingroom.repository;
 
 import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
-import org.adu.cbl.model.Document;
+import org.adu.readingroom.model.Document;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -22,8 +22,24 @@ public class DocumentRepositoryImpl implements DocumentRepository {
 	}
 
 	@Override
-	public void save(Document document) {
-		entityManager.persist(document);
+	public void save(Document newDocument) {
+		entityManager.persist(newDocument);
+	}
+
+	@Override
+	public Document getById(String documentId) {
+		return entityManager.find(Document.class, Integer.parseInt(documentId));
+	}
+
+	@Override
+	public void update(Document document) {
+		entityManager.merge(document);		
+	}
+
+	@Override
+	public void deleteById(String documentId) {
+		System.out.println(getById(documentId));
+		entityManager.remove(getById(documentId));
 	}
 
 }

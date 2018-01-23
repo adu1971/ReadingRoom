@@ -64,7 +64,7 @@
 		
 	<script	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.1/angular.min.js"></script>
 	
- 	<script src="/cbl/resources/js/controllers.js"></script> 
+ 	<script src="/readingroom/resources/js/controllers.js"></script> 
 </body>
 </html>
 

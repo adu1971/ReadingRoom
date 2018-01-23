@@ -1,4 +1,4 @@
-package org.adu.cbl.model;
+package org.adu.readingroom.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

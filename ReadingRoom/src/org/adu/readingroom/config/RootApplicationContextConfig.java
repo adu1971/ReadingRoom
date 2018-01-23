@@ -1,4 +1,4 @@
-package org.adu.cbl.config;
+package org.adu.readingroom.config;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;

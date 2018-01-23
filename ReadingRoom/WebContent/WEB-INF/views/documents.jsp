@@ -5,7 +5,7 @@
 
 <section class="container">
 
-	<a href="<spring:url value="/documents/add"/>"  class="btn btn-warning btn-large float-right">
+	<a href="<spring:url value="/documents/edit"/>"  class="btn btn-warning btn-large float-right">
 		<span class="glyphicon glyphicon-hand-right"></span> Add New Document 
 	</a>
 	<table  id="documentsTable" class="table table-bordered table-hover">	
@@ -19,11 +19,9 @@
 			<tr>
 				<th/>
 				<th>
-					<input type="text" id="nameFilterField" onkeyup="filterByName()" placeholder="Filter by name...">
+					<input type="text" id="titleFilter" onkeyup="filter('documentsTable', 1, 'titleFilter')" placeholder="Filter by title...">
 				</th>
-				<th>
-					<input type="text" id="explanationFilterField" onkeyup="filterByExplanation()" placeholder="Filter by explanation...">
-				</th>
+				<th/>
 				<th/>
 			</tr>
 		</thead>	
@@ -33,7 +31,8 @@
 						<td>${document.id}</td>
 						<td>${document.title}</td>
 						<td>
-							<a href="<spring:url value="/concepts/edit?conceptId=${concept.id}"/>"  class="btn btn-info"> Edit </a>
+							<a href="<spring:url value="/documents/edit?documentId=${document.id}"/>"  class="btn btn-info"> Edit Document Info </a>
+							<a href="<spring:url value="/documents/delete?documentId=${document.id}"/>"  class="btn btn-info"> Delete </a>
 						</td>
 				</tr>
 			</c:forEach>			

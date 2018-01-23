@@ -16,11 +16,12 @@
 	<li>Consider using w3.css instead of Bootstrap. W3Schools.org contains tutorials for both.</li>
 	<li> RDF OWL. Research for the already developed ontologies </li>
 	<li> Decide on which javascript framework to use (Google Web Kit looks to be a strong candidate. Compare with AngularJS). JQuery is a javascript library.</li>
-	<li> Project Name: Concepts Relational Concept-Document, Concept-Concept, Literature Analysis Tool, Semantic Webpage, deepsee/ConDo, Relating Literature Through Concepts, ReadingRoom, Readatorium, reed, SelfRead, ReadTogether, SocialRead, LetsRead, ReadAndThink</li>
+	<li> Project Name: Hush, Semanta, ConDoc, Literature Analysis Tool, Semantic Web, Readatorium, reed, SelfRead, ReadTogether, SocialRead, LetsRead</li>
 	<li> Docbook what is </li>
 	<li> My current decision is to use an RDBMS for persistence. What about using OODBMS. </li>
 	<li> Doc import funtionality should include, importing the snaphot of a textual(or ad free) part of a given web page(url). </li>
 	<li> Navigation Tree as in the http://docs.jboss.org </li>
 </ul>	
+
 
 </section>
